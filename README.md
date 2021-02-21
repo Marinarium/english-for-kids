@@ -1,2 +1,1 @@
-# english-for-kids
-Project from RS School
+# webpack-boilerplate

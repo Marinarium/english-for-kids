@@ -1,0 +1,51 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex-shrink: 0;
+}
+
+.footer {
+  background-color: $violet;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.course {
+  margin-bottom: 5px;
+}
+
+.course__logo {
+  width: 134px;
+  height: 41px;
+}
+
+.footer__git-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: #fff;
+}
+
+.footer__git-img {
+  margin-left: 10px;
+}

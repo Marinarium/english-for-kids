@@ -1,0 +1,17 @@
+.header {
+  margin-bottom: 20px;
+}
+
+.header__wrap {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1440px;
+  margin: auto;
+  padding: 20px 70px;
+
+  @media (max-width: 940px) {
+    padding: 20px;
+  }
+}

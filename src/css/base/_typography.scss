@@ -1,0 +1,28 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 64px;
+  font-family: 'Pacifico', cursive;
+  font-weight: normal;
+  text-shadow: 2px 2px 0 #515188, 3px 3px 0 rgba(0, 0, 0, 0.2);
+  text-align: left;
+  margin-bottom: 40px;
+
+  @media screen and (max-width: 510px) {
+    font-size: 36px;
+  }
+}
+
+.main-title__link {
+  color: $violet;
+}

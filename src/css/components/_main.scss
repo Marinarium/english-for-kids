@@ -1,0 +1,10 @@
+.main {
+  box-sizing: border-box;
+  max-width: 1440px;
+  margin: auto;
+  padding: 20px 70px;
+
+  @media (max-width: 940px) {
+    padding: 20px;
+  }
+}

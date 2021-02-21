@@ -1,0 +1,130 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+  margin-bottom: 40px;
+}
+
+.card {
+  height: 280px;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  position: relative;
+  transition-duration: 250ms;
+  cursor: pointer;
+  transition-property: box-shadow, transform, filter;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+  &:hover {
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.card_success {
+  opacity: 0.2;
+}
+
+.card_rotate {
+  transform: rotateY(180deg);
+}
+
+.card_rotate .card__back {
+  z-index: 3;
+  backface-visibility: visible;
+}
+
+.card_rotate .card__front {
+  display: none;
+}
+
+.card__front, .card__back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.card__front {
+  z-index: 2;
+}
+
+.card__back {
+  transform: rotateY(180deg);
+}
+
+.card__frame {
+  display: block;
+  height: 200px;
+  overflow: hidden;
+  border-bottom: 1px solid #F6F5FA;
+}
+
+.card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.card__title {
+  color: $dark-text;
+  font-size: 22px;
+  letter-spacing: 0.05em;
+  padding: 20px 20px 20px 30px;
+}
+
+.card__rotate {
+  position: absolute;
+  bottom: 0px;
+  right: 20px;
+  cursor: pointer;
+  transition-duration: 300ms;
+}
+
+.card__rotate:hover path{
+  fill: $violet;
+}
+
+/*---Play mode---*/
+.card_play {
+  .card__title {
+    display: none;
+  }
+
+  .card__rotate {
+    display: none;
+  }
+
+  .card__front {
+    height: 100%;
+  }
+
+  .card__frame {
+    height: 100%;
+  }
+
+}
+
+@media screen and (max-width: 1240px) {
+  .cards{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .main .cards {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .main ul.cards {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+  }
+}
